@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>LSGF</title>
+    <title>助力每个梦想No.1：brz</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -22,19 +22,27 @@
 
 
 <div class="yinyue">
-    <img class="music" src="44.jpg" alt="">
+    <img class="music" src="musicPic.jpg" alt="">
     <audio autoplay="autoplay" id="audio" loop="loop">
-        <source src="./music1.mp3" type="audio/MP3">
-
+        <source src="./那奇沃夫 - Sorry Jony.mp3" type="audio/MP3">
     </audio>
-
 </div>
+
+<script>
+    let mucics = document.getElementById('audio')
+    document.body.addEventListener('mousemove', function () {
+        setTimeout(() => {
+            mucics.play();
+        }, 2000);
+    }, false);
+</script>
+
 <div class="row">
     <div class="centercolumn">
         <div class="card">
 
-            <h2 id="biaoti">浮生六记卷一</h2><br />
-            <hr />
+            <h2 id="biaoti">浮生六记卷一</h2><br/>
+            <hr/>
             <h4 id="qita">2021 年 1 月 29日</h4>
 
             <p style="text-indent:2em">我生于乾降二十八年(1763年)的冬天ー月十ニ日。那时天下承平，国家安泰。我生于读书人家家在苏州城沧浪亭畔，上天待我何等厚爱。</p>
@@ -57,10 +65,10 @@
                 尽管如此，我已倾心于芸，不能释怀。私下对母亲说：“我若娶妻，一定要娶淑姐姐。”母亲也喜欢她的温柔和顺，便摘下金指环相赠，作为信物与陈家订下婚约。
             </p>
         </div>
-        <br /><br />
+        <br/><br/>
         <div class="card">
-            <h2 id="biaoti">闺房之乐</h2><br />
-            <hr />
+            <h2 id="biaoti">闺房之乐</h2><br/>
+            <hr/>
             <h4 id="qita">2020 年 1 月 30日</h4>
             <p style="text-indent:2em">
                 那一天是乾隆四十年(1775年)七月十六日，我与芸订婚。
@@ -105,23 +113,16 @@
 </div>
 
 
-<br /><br />
+<br/><br/>
 <button class="bt" onclick="window.open('https://blog.csdn.net/weixin_51263734')">MY CSDN BLOG</button>
 
-<script>
-    let mucics = document.getElementById('audio')
-    document.body.addEventListener('mousemove', function() {
-        setTimeout(() => {
-            mucics.play();
-        }, 2000);
-    }, false);
-</script>
 
 <div class="footer">
-    <br />
-    <p>希望能成为有梦想 有温度的教技人</p><br />
-    <p>你好 我是风小风</p><br />
-    <a href="https://blog.csdn.net/weixin_51263734" target="_blank"><img class="someimg" src="./hou.png" alt="" width="30"></a>
+    <br/>
+    <p>希望能成为有梦想 有温度的教技人</p><br/>
+    <p>你好 我是风小风</p><br/>
+    <a href="https://blog.csdn.net/weixin_51263734" target="_blank"><img class="someimg" src="./hou.png" alt=""
+                                                                         width="30"></a>
     <abbr title="QQ账号：2633386281"><img class="someimg" src="./qq.png" alt="" width="30"></abbr>
     <abbr title="邮箱：fzx2003zhixue@163.com"><img class="someimg" src="./mail.png" alt="" width="30"></abbr>
 </div>
@@ -140,11 +141,13 @@
                 }
         })();
         init();
+
         function init() {
             css(".heart{width: 10px;height: 10px;position: fixed;background: #f00;transform: rotate(45deg);-webkit-transform: rotate(45deg);-moz-transform: rotate(45deg);}.heart:after,.heart:before{content: '';width: inherit;height: inherit;background: inherit;border-radius: 50%;-webkit-border-radius: 50%;-moz-border-radius: 50%;position: absolute;}.heart:after{top: -5px;}.heart:before{left: -5px;}");
             attachEvent();
             gameloop();
         }
+
         function gameloop() {
             for (var i = 0; i < hearts.length; i++) {
                 if (hearts[i].alpha <= 0) {
@@ -159,6 +162,7 @@
             }
             requestAnimationFrame(gameloop);
         }
+
         function attachEvent() {
             var old = typeof window.onclick === "function" && window.onclick;
             window.onclick = function (event) {
@@ -166,6 +170,7 @@
                 createHeart(event);
             }
         }
+
         function createHeart(event) {
             var d = document.createElement("div");
             d.className = "heart";
@@ -179,6 +184,7 @@
             });
             document.body.appendChild(d);
         }
+
         function css(css) {
             var style = document.createElement("style");
             style.type = "text/css";
@@ -189,6 +195,7 @@
             }
             document.getElementsByTagName('head')[0].appendChild(style);
         }
+
         function randomColor() {
             return "rgb(" + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + "," + (~~(Math.random() * 255)) + ")";
         }
